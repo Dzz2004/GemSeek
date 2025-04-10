@@ -13,6 +13,8 @@ review_path = path + "/yelp_academic_dataset_review.json"
 
 filtered_reviews = []
 
+# columns: review_id, user_id, business_id, stars, useful, funny, cool, text, date
+
 with open(review_path, "r", encoding="utf-8") as open_file:
     for line in tqdm(open_file, total=6990280):  # ✅ tqdm 直接包 open_file
         data = json.loads(line)
