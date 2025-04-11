@@ -85,7 +85,7 @@
 ## 🗂️ 文件输出结构 | Output File Summary
 
 | 文件名 | 说明 |
-|--||
+|--|--|
 | `business_feature.ipynb` | 全部特征工程与评分代码 |
 | `business_Indianapolis_cleaned.csv` | 清洗并标准化后的商家数据 |
 | `business_Indianapolis_top_attributes.csv` | 高频属性字段及值统计 |
