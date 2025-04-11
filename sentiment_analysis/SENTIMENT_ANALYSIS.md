@@ -33,4 +33,9 @@ Through the aforementioned steps, the text data in the `reviews_Indianpolis.csv`
 | This product is amazing!       | Very Positive            |
 | I am not satisfied with the service. | Negative                |
 
+
+**The distribution of sentiment**:
+
+![text](sentiment_distribution.png)
+
 This process effectively handles long texts using the sliding window method and enhances model inference efficiency through batch processing, providing a viable solution for large-scale text sentiment analysis.
