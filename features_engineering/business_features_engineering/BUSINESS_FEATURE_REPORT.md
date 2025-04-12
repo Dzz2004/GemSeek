@@ -67,9 +67,9 @@
 - 内容包括：
   - `attr_score` 分布直方图 + KDE
   - `cat_score` 分布直方图 + KDE
-  - 二维散点图：`cat_score` vs `attr_score`（辅助识别右上角宝藏商家）
 
 
+![alt text](business_scores_distribution.png)
 
 ## 📌 变量保留策略 | Variable Retention Strategy
 
