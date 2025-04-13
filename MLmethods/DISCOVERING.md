@@ -53,7 +53,7 @@
 
 ## ✅ 结果输出 | Final Outputs
 
-1. 📄 **`cluster1_scores_all.csv`**：包含所有商家的最终 gem_score 结果（含排序）
+1. 📄 **`cluster1_scores_all.csv`**：包含所有商家的最终 gem_score 结果
 2. 🌟 **`gem_candidates_final.csv`**：与原人工标注的 135 家商家交集后留下的 Top 82 个宝藏商家（得分降序）
 
 > The final gem candidates include 82 businesses that were both in the original handpicked gems and the top-ranked by the regression model.
