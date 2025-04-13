@@ -8,6 +8,16 @@
 本项目旨在从 Yelp 数据集中提取高质量的结构化特征，构建适用于后续分析和建模的商家、用户和评论多维度数据集。  
 This project aims to extract high-quality structured features from the Yelp dataset, building a multi-dimensional dataset of businesses, users, and reviews for downstream analysis and modeling.
 
+## 📁 源代码与输出 | Code & Outputs
+
+- **三种特征的文件夹 / folders**: `business_features_engineering`,`review_features_engineering`,`user_features_engineering`
+- **合并和补充代码 / merge and supplement**: `feature_merging.py`
+- **最终输出 / Final Output**:  `features.csv`,`features_weighted.csv`
+- **包含字段 / contains**:
+  ```txt
+  business_id,stars,review_count,attr_score,cat_score,avg_review_stars,std_review_stars_scaled,pos_review_ratio,neg_review_ratio,neu_review_ratio,long_review_ratio,avg_review_length_scaled,avg_word_count_scaled,avg_useful_scaled,avg_funny_scaled,avg_cool_scaled,interact_score_mean_scaled,sentiment_score_mean_scaled,first_review_date,last_review_date,recent_review_ratio,review_timespan_days_scaled,review_density_per_day_scaled,review_burst_score_scaled,avg_user_avg_stars,elite_user_ratio,avg_user_account_age_days,avg_user_review_count_log_scaled,avg_user_useful_log_scaled,avg_user_funny_log_scaled,avg_user_cool_log_scaled,avg_user_fans_log_scaled,avg_user_compliments_log_scaled
+  ```
+
 ## 🏪 商家特征 | Business Features
 
 - **源文件**：`business_feature.ipynb`  
