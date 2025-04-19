@@ -114,6 +114,36 @@
 - Detailed output fields—such as star rating, categories, business hours, and geographic coordinates—are stored in `gem_businesses_info.csv`.
 
 
+## 🔎 验证与优化：后验数据与回归泛化 | Validation & Optimization
+
+- **目标**：从模型结果出发，使用后验数据分析和统计检验方法验证打分系统的有效性，并以此优化规则与模型结构。
+- **数据更新**：收集 2025 年 Yelp 商家当前评论数与评分信息，构建后验数据集（`cluster1_now_sorted.csv`、`gem_businesses_info_now.csv`）。
+- **对比分析**：
+  - 原始 82 个 gem 商家评论增长率显著高于随机样本（平均增长率：**1.18 vs. 0.54**）
+  - 但发现 gem 商户中也存在未爆发兑现的个体，推动我们对打分规则进行了进一步优化
+
+### ✅ 规则优化亮点 | Rule Refinement Highlights
+
+- 评论数按分位数分段，不再使用硬编码阈值，提高泛化能力
+- 增加对爆发性（`burst_score`, `recent_ratio`, `sentiment_score`）的动态加权处理，强化区别度
+- 生成热力图分析评分与评论数结构与未来增长潜力之间的关系，用于支持分段合理性
+
+### 📈 回归模型泛化 | Regression Generalization
+
+- 使用新打分结果 `gem_score` 作为回归标签，训练 XGBoost 回归模型进行拟合
+- 模型 R² = **0.724**，MSE = **0.031**，具备较强拟合力与泛化能力
+- SHAP 分析显示模型学到的潜在机制与打分目标一致：关注“低热度高评分+爆发潜力”
+
+### 📊 显著性检验支持 | Statistical Significance Verification
+
+- gem_score 与未来评论增长率之间存在高度正相关：
+  - Pearson r = **0.529**，p < 1e-7
+  - Spearman ρ = **0.475**，p < 1e-6
+  - Mann–Whitney U 检验 p = **4.77e-5**
+- 说明打分系统具备良好的一致性、排序能力与预判价值
+
+> 🔍 Our scoring rules were optimized based on follow-up data from April 2025. A regression model trained on these scores achieved R² = 0.724. Statistical tests confirmed strong correlation and predictive value, demonstrating the validity of the gem_score system.
+
 
 ## ✅ 项目亮点与总结 | **Highlights & Conclusion**
 
